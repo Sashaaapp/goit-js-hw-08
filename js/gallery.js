@@ -99,15 +99,15 @@ function selectorImage(event) {
      </div>`,
     {
       onShow: () => {
-        document.addEventListener('keydown', onModalClose);
+        document.addEventListener('keydown', ModalClose);
       },
       onClose: () => {
-        document.removeEventListener('keydown', onModalClose);
+        document.removeEventListener('keydown', ModalClose);
       },
     }
   );
   instance.show();
-  function onModalClose(event) {
+  function ModalClose(event) {
     if (event.code === 'Escape') {
       instance.close();
     }
